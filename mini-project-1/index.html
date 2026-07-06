@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Compliance Operations Playbook</title>
+
+  <meta
+    name="description"
+    content="A fictional compliance operations landing page built with semantic HTML, CSS, accessibility, and responsive layouts."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#" aria-label="Compliance Operations Playbook home">
+        ComplianceOps
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#automations">Automations</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#controls">Controls</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Fictional compliance operations team</p>
+
+          <h1>Turn recurring compliance work into clear, trackable playbooks.</h1>
+
+          <p class="hero-description">
+            A sample landing page for a team that manages vendor reviews,
+            access checks, policy approvals, and audit evidence requests using
+            simple workflow automation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#checklist">View checklist</a>
+            <a class="button button-secondary" href="#request">Request a demo</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Weekly operations summary">
+          <p class="card-label">This week</p>
+
+          <ul class="summary-list">
+            <li>
+              <span class="summary-number">12</span>
+              <span>Vendor reviews queued</span>
+            </li>
+            <li>
+              <span class="summary-number">8</span>
+              <span>Access review tasks open</span>
+            </li>
+            <li>
+              <span class="summary-number">4</span>
+              <span>Policy updates pending</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="automations" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">What we automate</p>
+          <h2>Common workflows made easier to manage</h2>
+          <p>
+            These are fictional examples based on common business operations
+            workflows. The goal is to practice layout, structure, and content.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <h3>Vendor onboarding</h3>
+            <p>
+              Track security review steps, assigned owners, missing documents,
+              and approval status before a vendor goes live.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Access reviews</h3>
+            <p>
+              Coordinate quarterly user access checks, evidence collection, and
+              reviewer sign-off in one repeatable checklist.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Policy approvals</h3>
+            <p>
+              Organize policy review cycles, version updates, stakeholder
+              approvals, and final publishing tasks.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Audit evidence</h3>
+            <p>
+              Prepare evidence requests, track due dates, and document what was
+              reviewed before the audit deadline.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" class="section section-muted">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">Checklist</p>
+          <h2>Vendor review playbook</h2>
+          <p>
+            A clear checklist helps teams avoid missed steps. Later in this
+            course, we will turn similar workflow ideas into JavaScript, React,
+            backend, database, and AI-assisted features.
+          </p>
+        </div>
+
+        <div class="checklist-card">
+          <h3>Review steps</h3>
+
+          <ol class="checklist">
+            <li>Confirm business owner and vendor purpose.</li>
+            <li>Collect security questionnaire or equivalent evidence.</li>
+            <li>Review data access and system integration scope.</li>
+            <li>Assign risk level and required follow-up actions.</li>
+            <li>Record reviewer decision and approval date.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="controls" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Sample controls</p>
+          <h2>Dummy control library</h2>
+          <p>
+            These are fictional controls for practice only. They are not legal,
+            audit, or compliance advice.
+          </p>
+        </div>
+
+        <div class="control-grid">
+          <article class="control-card">
+            <p class="control-id">VR-01</p>
+            <h3>Vendor risk review</h3>
+            <p>Vendors are reviewed before production access is approved.</p>
+          </article>
+
+          <article class="control-card">
+            <p class="control-id">AC-02</p>
+            <h3>Quarterly access check</h3>
+            <p>User access is reviewed every quarter by assigned owners.</p>
+          </article>
+
+          <article class="control-card">
+            <p class="control-id">POL-03</p>
+            <h3>Policy approval workflow</h3>
+            <p>Policy changes require documented review and approval.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-muted">
+      <div class="container narrow">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Is this a real compliance system?</summary>
+            <p>
+              No. This is a fictional learning project using dummy data only.
+            </p>
+          </details>
+
+          <details>
+            <summary>Why are we building this with plain HTML and CSS first?</summary>
+            <p>
+              Because strong frontend foundations make React, Tailwind, and
+              full stack development easier later.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will this become part of the final capstone?</summary>
+            <p>
+              The theme connects to the final capstone, but this project is only
+              the first frontend portfolio milestone.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="request" class="section">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">Request access</p>
+          <h2>Start a fictional workflow review</h2>
+          <p>
+            This form does not submit anywhere yet. This week, it exists so we
+            can practice accessible labels, inputs, helper text, and layout.
+          </p>
+        </div>
+
+        <form class="request-form" aria-label="Workflow request form">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              aria-describedby="email-help"
+            />
+            <p id="email-help" class="helper-text">
+              Use a fictional email for this practice project.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="workflow-type">Workflow type</label>
+            <select id="workflow-type" name="workflow-type" required>
+              <option value="">Select one</option>
+              <option value="vendor-review">Vendor review</option>
+              <option value="access-review">Access review</option>
+              <option value="policy-review">Policy review</option>
+              <option value="audit-evidence">Audit evidence</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Request details</label>
+            <textarea
+              id="details"
+              name="details"
+              rows="5"
+              placeholder="Example: Please start a fictional vendor review for Acme Demo Services."
+            ></textarea>
+          </div>
+
+          <button class="button button-primary" type="submit">
+            Submit sample request
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 ComplianceOps Demo. Fictional project for learning only.</p>
+      <a href="#">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
