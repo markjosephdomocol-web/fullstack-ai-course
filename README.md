@@ -43,7 +43,7 @@ A full stack AI app using dummy compliance documents, RAG Q&A, AI-generated task
 
 | Week   | Topic                                        | Status      |
 | ------ | -------------------------------------------- | ----------- |
-| Week 1 | Developer Setup, Git, GitHub, Command Line   | In Progress |
+| Week 1 | Developer Setup, Git, GitHub, Command Line   | Complete    |
 | Week 2 | HTML, CSS, Accessibility, Responsive Layouts | Not Started |
 | Week 3 | Tailwind CSS and Mini Project 1 Completion   | Not Started |
 
@@ -66,4 +66,6 @@ I will not upload or commit:
 
 ## Current Status
 
-Week 1 is focused on setting up my developer environment and publishing my first GitHub repository.
+## Current Status
+
+Week 1 is complete. My developer environment is set up, my course repository is published on GitHub, and my first Git workflow has been practiced.
