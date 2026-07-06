@@ -32,7 +32,21 @@ This project uses fictional/sample data only. It does not include real company p
 
 ## Screenshot
 
-Add screenshot here after completing the page.
-
-```md
 ![Operations Playbook Landing Site](./screenshots/week-02-landing-page.png)
+
+## What I Learned
+
+- How to structure a page with semantic HTML
+- How to use header, nav, main, section, article, aside, and footer
+- How the CSS box model affects spacing
+- How to use flexbox for one-direction layouts
+- How to use grid for card and section layouts
+- How media queries make the page responsive
+- Why labels, focus states, and skip links improve accessibility
+
+## Known Limitations
+
+- The form does not submit yet
+- No JavaScript functionality yet
+- No Tailwind CSS yet
+- Not deployed yet
