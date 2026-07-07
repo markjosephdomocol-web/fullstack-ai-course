@@ -1,283 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operations Playbook</title>
+    <meta
+      name="description"
+      content="A fictional compliance operations landing page for workflow checklists, policy reviews, access requests, and audit evidence."
+    />
+  </head>
 
-  <title>Compliance Operations Playbook</title>
+  <body class="bg-slate-950 text-slate-100">
+    <header class="border-b border-white/10 bg-slate-950/90">
+      <nav
+        class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between"
+        aria-label="Main navigation"
+      >
+        <a href="#" class="text-xl font-bold tracking-tight">
+          Ops Playbook
+        </a>
 
-  <meta
-    name="description"
-    content="A fictional compliance operations landing page built with semantic HTML, CSS, accessibility, and responsive layouts."
-  />
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="logo" href="#" aria-label="Compliance Operations Playbook home">
-        ComplianceOps
-      </a>
-
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#automations">Automations</a>
-        <a href="#checklist">Checklist</a>
-        <a href="#controls">Controls</a>
-        <a href="#faq">FAQ</a>
+        <div class="flex flex-wrap gap-3 text-sm text-slate-300">
+          <a href="#automate" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
+            Automations
+          </a>
+          <a href="#playbook" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
+            Playbook
+          </a>
+          <a href="#controls" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
+            Controls
+          </a>
+          <a href="#faq" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
+            FAQ
+          </a>
+        </div>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main id="main-content">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Fictional compliance operations team</p>
-
-          <h1>Turn recurring compliance work into clear, trackable playbooks.</h1>
-
-          <p class="hero-description">
-            A sample landing page for a team that manages vendor reviews,
-            access checks, policy approvals, and audit evidence requests using
-            simple workflow automation.
+    <main>
+      <section class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:py-24">
+        <div>
+          <p class="mb-4 inline-flex rounded-full bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300">
+            Fictional compliance operations team
           </p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#checklist">View checklist</a>
-            <a class="button button-secondary" href="#request">Request a demo</a>
+          <h1 class="text-4xl font-bold tracking-tight text-white md:text-6xl">
+            Turn repeatable compliance work into clear operating playbooks.
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            A simple landing page for documenting vendor onboarding, policy reviews,
+            access requests, and audit evidence workflows using dummy data only.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#playbook"
+              class="rounded-xl bg-cyan-400 px-5 py-3 text-center font-semibold text-slate-950 hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-200"
+            >
+              View Playbook
+            </a>
+
+            <a
+              href="#faq"
+              class="rounded-xl border border-white/15 px-5 py-3 text-center font-semibold text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            >
+              Learn More
+            </a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Weekly operations summary">
-          <p class="card-label">This week</p>
+        <aside class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+          <h2 class="text-xl font-semibold text-white">Weekly Operations Snapshot</h2>
 
-          <ul class="summary-list">
-            <li>
-              <span class="summary-number">12</span>
-              <span>Vendor reviews queued</span>
-            </li>
-            <li>
-              <span class="summary-number">8</span>
-              <span>Access review tasks open</span>
-            </li>
-            <li>
-              <span class="summary-number">4</span>
-              <span>Policy updates pending</span>
-            </li>
-          </ul>
+          <div class="mt-6 grid gap-4">
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="text-sm text-slate-400">Open reviews</p>
+              <p class="mt-2 text-3xl font-bold text-white">24</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="text-sm text-slate-400">Evidence requests</p>
+              <p class="mt-2 text-3xl font-bold text-white">12</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="text-sm text-slate-400">High-priority items</p>
+              <p class="mt-2 text-3xl font-bold text-white">5</p>
+            </div>
+          </div>
         </aside>
-      </div>
-    </section>
+      </section>
 
-    <section id="automations" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">What we automate</p>
-          <h2>Common workflows made easier to manage</h2>
-          <p>
-            These are fictional examples based on common business operations
-            workflows. The goal is to practice layout, structure, and content.
-          </p>
-        </div>
-
-        <div class="card-grid">
-          <article class="feature-card">
-            <h3>Vendor onboarding</h3>
-            <p>
-              Track security review steps, assigned owners, missing documents,
-              and approval status before a vendor goes live.
+      <section id="automate" class="bg-slate-900 px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <div class="max-w-2xl">
+            <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+              What we automate
             </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Access reviews</h3>
-            <p>
-              Coordinate quarterly user access checks, evidence collection, and
-              reviewer sign-off in one repeatable checklist.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Policy approvals</h3>
-            <p>
-              Organize policy review cycles, version updates, stakeholder
-              approvals, and final publishing tasks.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Audit evidence</h3>
-            <p>
-              Prepare evidence requests, track due dates, and document what was
-              reviewed before the audit deadline.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="checklist" class="section section-muted">
-      <div class="container two-column">
-        <div>
-          <p class="eyebrow">Checklist</p>
-          <h2>Vendor review playbook</h2>
-          <p>
-            A clear checklist helps teams avoid missed steps. Later in this
-            course, we will turn similar workflow ideas into JavaScript, React,
-            backend, database, and AI-assisted features.
-          </p>
-        </div>
-
-        <div class="checklist-card">
-          <h3>Review steps</h3>
-
-          <ol class="checklist">
-            <li>Confirm business owner and vendor purpose.</li>
-            <li>Collect security questionnaire or equivalent evidence.</li>
-            <li>Review data access and system integration scope.</li>
-            <li>Assign risk level and required follow-up actions.</li>
-            <li>Record reviewer decision and approval date.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section id="controls" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Sample controls</p>
-          <h2>Dummy control library</h2>
-          <p>
-            These are fictional controls for practice only. They are not legal,
-            audit, or compliance advice.
-          </p>
-        </div>
-
-        <div class="control-grid">
-          <article class="control-card">
-            <p class="control-id">VR-01</p>
-            <h3>Vendor risk review</h3>
-            <p>Vendors are reviewed before production access is approved.</p>
-          </article>
-
-          <article class="control-card">
-            <p class="control-id">AC-02</p>
-            <h3>Quarterly access check</h3>
-            <p>User access is reviewed every quarter by assigned owners.</p>
-          </article>
-
-          <article class="control-card">
-            <p class="control-id">POL-03</p>
-            <h3>Policy approval workflow</h3>
-            <p>Policy changes require documented review and approval.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section section-muted">
-      <div class="container narrow">
-        <div class="section-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>Frequently asked questions</h2>
-        </div>
-
-        <div class="faq-list">
-          <details>
-            <summary>Is this a real compliance system?</summary>
-            <p>
-              No. This is a fictional learning project using dummy data only.
-            </p>
-          </details>
-
-          <details>
-            <summary>Why are we building this with plain HTML and CSS first?</summary>
-            <p>
-              Because strong frontend foundations make React, Tailwind, and
-              full stack development easier later.
-            </p>
-          </details>
-
-          <details>
-            <summary>Will this become part of the final capstone?</summary>
-            <p>
-              The theme connects to the final capstone, but this project is only
-              the first frontend portfolio milestone.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="request" class="section">
-      <div class="container two-column">
-        <div>
-          <p class="eyebrow">Request access</p>
-          <h2>Start a fictional workflow review</h2>
-          <p>
-            This form does not submit anywhere yet. This week, it exists so we
-            can practice accessible labels, inputs, helper text, and layout.
-          </p>
-        </div>
-
-        <form class="request-form" aria-label="Workflow request form">
-          <div class="form-group">
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Work email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              aria-describedby="email-help"
-            />
-            <p id="email-help" class="helper-text">
-              Use a fictional email for this practice project.
+            <h2 class="mt-3 text-3xl font-bold text-white">
+              Common workflows made easier to follow
+            </h2>
+            <p class="mt-4 text-slate-300">
+              These cards represent fictional workflow areas that a compliance operations
+              team might track.
             </p>
           </div>
 
-          <div class="form-group">
-            <label for="workflow-type">Workflow type</label>
-            <select id="workflow-type" name="workflow-type" required>
-              <option value="">Select one</option>
-              <option value="vendor-review">Vendor review</option>
-              <option value="access-review">Access review</option>
-              <option value="policy-review">Policy review</option>
-              <option value="audit-evidence">Audit evidence</option>
-            </select>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <span class="rounded-full bg-cyan-400/10 px-3 py-1 text-sm font-medium text-cyan-300">
+                Vendor
+              </span>
+              <h3 class="mt-5 text-xl font-semibold text-white">Vendor Reviews</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">
+                Track onboarding tasks, risk checks, review owners, and required documents.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <span class="rounded-full bg-purple-400/10 px-3 py-1 text-sm font-medium text-purple-300">
+                Policy
+              </span>
+              <h3 class="mt-5 text-xl font-semibold text-white">Policy Reviews</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">
+                Organize review cycles, approvals, version checks, and publishing steps.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-sm font-medium text-emerald-300">
+                Access
+              </span>
+              <h3 class="mt-5 text-xl font-semibold text-white">Access Requests</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">
+                Standardize request intake, approval, provisioning, and access removal.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <span class="rounded-full bg-amber-400/10 px-3 py-1 text-sm font-medium text-amber-300">
+                Audit
+              </span>
+              <h3 class="mt-5 text-xl font-semibold text-white">Audit Evidence</h3>
+              <p class="mt-3 text-sm leading-6 text-slate-300">
+                Prepare evidence requests, owners, due dates, and completion status.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="playbook" class="px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <div class="max-w-2xl">
+            <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+              Compliance Operations Playbook
+            </p>
+            <h2 class="mt-3 text-3xl font-bold text-white">
+              Four fictional checklists for repeatable operations
+            </h2>
           </div>
 
-          <div class="form-group">
-            <label for="details">Request details</label>
-            <textarea
-              id="details"
-              name="details"
-              rows="5"
-              placeholder="Example: Please start a fictional vendor review for Acme Demo Services."
-            ></textarea>
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <article class="rounded-3xl bg-white p-6 text-slate-950">
+              <h3 class="text-xl font-bold">Vendor Onboarding Checklist</h3>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li>✓ Confirm business owner and vendor purpose</li>
+                <li>✓ Collect security questionnaire</li>
+                <li>✓ Review data access and risk level</li>
+                <li>✓ Record approval decision</li>
+              </ul>
+            </article>
+
+            <article class="rounded-3xl bg-white p-6 text-slate-950">
+              <h3 class="text-xl font-bold">Policy Review Checklist</h3>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li>✓ Confirm policy owner</li>
+                <li>✓ Review last updated date</li>
+                <li>✓ Capture reviewer comments</li>
+                <li>✓ Publish approved version</li>
+              </ul>
+            </article>
+
+            <article class="rounded-3xl bg-white p-6 text-slate-950">
+              <h3 class="text-xl font-bold">Access Request Checklist</h3>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li>✓ Validate requester and manager approval</li>
+                <li>✓ Confirm least-privilege access</li>
+                <li>✓ Set access review date</li>
+                <li>✓ Document completion evidence</li>
+              </ul>
+            </article>
+
+            <article class="rounded-3xl bg-white p-6 text-slate-950">
+              <h3 class="text-xl font-bold">Audit Evidence Checklist</h3>
+              <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                <li>✓ Identify control owner</li>
+                <li>✓ Collect sample evidence</li>
+                <li>✓ Check evidence date range</li>
+                <li>✓ Mark ready for auditor review</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="controls" class="bg-slate-900 px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid gap-10 md:grid-cols-2 md:items-start">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+                Sample controls
+              </p>
+              <h2 class="mt-3 text-3xl font-bold text-white">
+                Dummy control examples for portfolio practice
+              </h2>
+              <p class="mt-4 text-slate-300">
+                These examples are fictional and are only used to practice UI layout,
+                content structure, and compliance-style workflow thinking.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <article class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <h3 class="font-semibold text-white">AC-01 — Quarterly Access Review</h3>
+                <p class="mt-2 text-sm text-slate-300">
+                  Review user access every quarter and document approval evidence.
+                </p>
+              </article>
+
+              <article class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <h3 class="font-semibold text-white">VR-02 — Vendor Risk Review</h3>
+                <p class="mt-2 text-sm text-slate-300">
+                  Assess new vendors before onboarding and assign a risk rating.
+                </p>
+              </article>
+
+              <article class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <h3 class="font-semibold text-white">IR-03 — Incident Escalation</h3>
+                <p class="mt-2 text-sm text-slate-300">
+                  Escalate high-priority incidents to the correct owner within target timelines.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="px-6 py-16">
+        <div class="mx-auto max-w-4xl">
+          <div class="text-center">
+            <p class="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+              FAQ
+            </p>
+            <h2 class="mt-3 text-3xl font-bold text-white">
+              Common questions
+            </h2>
           </div>
 
-          <button class="button button-primary" type="submit">
-            Submit sample request
-          </button>
-        </form>
-      </div>
-    </section>
-  </main>
+          <div class="mt-10 space-y-4">
+            <article class="rounded-2xl bg-white p-6 text-slate-950">
+              <h3 class="font-bold">Is this a real compliance system?</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-700">
+                No. This is a fictional portfolio project that uses dummy content only.
+              </p>
+            </article>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 ComplianceOps Demo. Fictional project for learning only.</p>
-      <a href="#">Back to top</a>
-    </div>
-  </footer>
-</body>
+            <article class="rounded-2xl bg-white p-6 text-slate-950">
+              <h3 class="font-bold">What is the purpose of this landing page?</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-700">
+                The goal is to practice semantic HTML, responsive layout, Tailwind CSS,
+                accessibility basics, and portfolio documentation.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-6 text-slate-950">
+              <h3 class="font-bold">Why use dummy compliance data?</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-700">
+                Dummy data keeps the project safe and avoids exposing real company,
+                customer, legal, HR, security, or financial information.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 pb-20">
+        <div class="mx-auto max-w-6xl rounded-3xl bg-cyan-400 p-8 text-center text-slate-950 md:p-12">
+          <h2 class="text-3xl font-bold">Ready to standardize the next workflow?</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-slate-800">
+            This mini project prepares the foundation for future workflow tracker,
+            dashboard, and AI assistant projects.
+          </p>
+          <a
+            href="#"
+            class="mt-8 inline-flex rounded-xl bg-slate-950 px-5 py-3 font-semibold text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-700"
+          >
+            Back to Top
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 px-6 py-8 text-center text-sm text-slate-400">
+      <p>Built with HTML and Tailwind CSS. Dummy data only.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

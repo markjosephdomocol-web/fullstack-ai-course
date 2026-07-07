@@ -1,0 +1,16 @@
+{
+  "name": "mini-project-1-operations-playbook",
+  "version": "1.0.0",
+  "description": "A responsive operations playbook landing site built with HTML and Tailwind CSS.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "latest",
+    "tailwindcss": "latest",
+    "vite": "latest"
+  }
+}
