@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="A fictional workflow tracker built while learning JavaScript."
+    />
+
+    <title>Workflow Tracker</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">Mini Project 2</p>
+        <h1>Workflow Tracker</h1>
+
+        <p class="header-description">
+          Track fictional compliance and operations tasks using JavaScript.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section aria-labelledby="summary-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h2 id="summary-heading">Task summary</h2>
+          </div>
+        </div>
+
+        <div id="task-summary" class="summary-grid"></div>
+      </section>
+
+      <section aria-labelledby="tasks-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Work queue</p>
+            <h2 id="tasks-heading">Workflow tasks</h2>
+          </div>
+
+          <p id="task-count" class="task-count"></p>
+        </div>
+
+        <div
+          id="task-list"
+          class="task-grid"
+          aria-live="polite"
+        ></div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
