@@ -10,7 +10,10 @@ export function formatOwnerName(ownerName) {
     .split(" ")
     .filter(Boolean)
     .map((word) => {
-      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      return (
+        word.charAt(0).toUpperCase() +
+        word.slice(1).toLowerCase()
+      );
     })
     .join(" ");
 }
@@ -66,6 +69,7 @@ export function isOverdue(task, today = new Date()) {
   }
 
   const dueDate = new Date(`${task.dueDate}T00:00:00`);
+
   const startOfToday = new Date(
     today.getFullYear(),
     today.getMonth(),
@@ -80,8 +84,12 @@ export function isOverdue(task, today = new Date()) {
  *
  * Negative numbers mean the task is overdue.
  */
-export function getDaysUntilDue(dateString, today = new Date()) {
+export function getDaysUntilDue(
+  dateString,
+  today = new Date(),
+) {
   const dueDate = new Date(`${dateString}T00:00:00`);
+
   const startOfToday = new Date(
     today.getFullYear(),
     today.getMonth(),
@@ -89,7 +97,9 @@ export function getDaysUntilDue(dateString, today = new Date()) {
   );
 
   const millisecondsPerDay = 1000 * 60 * 60 * 24;
-  const difference = dueDate.getTime() - startOfToday.getTime();
+
+  const difference =
+    dueDate.getTime() - startOfToday.getTime();
 
   return Math.ceil(difference / millisecondsPerDay);
 }
@@ -102,7 +112,9 @@ export function filterTasksByStatus(tasks, status) {
     return [...tasks];
   }
 
-  return tasks.filter((task) => task.status === status);
+  return tasks.filter((task) => {
+    return task.status === status;
+  });
 }
 
 /**
@@ -113,14 +125,18 @@ export function filterTasksByRisk(tasks, riskLevel) {
     return [...tasks];
   }
 
-  return tasks.filter((task) => task.riskLevel === riskLevel);
+  return tasks.filter((task) => {
+    return task.riskLevel === riskLevel;
+  });
 }
 
 /**
  * Find one task using its ID.
  */
 export function findTaskById(tasks, taskId) {
-  return tasks.find((task) => task.id === taskId);
+  return tasks.find((task) => {
+    return task.id === taskId;
+  });
 }
 
 /**
@@ -130,17 +146,27 @@ export function findTaskById(tasks, taskId) {
  */
 export function sortTasksByDueDate(tasks) {
   return [...tasks].sort((taskA, taskB) => {
-    return new Date(taskA.dueDate) - new Date(taskB.dueDate);
+    return (
+      new Date(taskA.dueDate) -
+      new Date(taskB.dueDate)
+    );
   });
 }
 
 /**
- * Count how many tasks exist for each status.
+ * Count how many tasks exist for each recognized status.
  */
 export function countTasksByStatus(tasks) {
   return tasks.reduce(
     (counts, task) => {
-      counts[task.status] += 1;
+      if (Object.hasOwn(counts, task.status)) {
+        counts[task.status] += 1;
+      } else {
+        console.warn(
+          `Unknown task status: ${task.status}`,
+        );
+      }
+
       return counts;
     },
     {
@@ -156,11 +182,19 @@ export function countTasksByStatus(tasks) {
  * Return all high-risk tasks.
  */
 export function getHighRiskTasks(tasks) {
-  return tasks.filter((task) => task.riskLevel === "high");
+  return tasks.filter((task) => {
+    return task.riskLevel === "high";
+  });
 }
 
+/**
+ * Return all tasks assigned to a specific owner.
+ */
 export function getTasksByOwner(tasks, ownerName) {
   return tasks.filter((task) => {
-    return task.owner.toLowerCase() === ownerName.toLowerCase();
+    return (
+      task.owner.toLowerCase() ===
+      ownerName.toLowerCase()
+    );
   });
 }

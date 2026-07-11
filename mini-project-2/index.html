@@ -22,6 +22,7 @@
     <header class="site-header">
       <div class="container">
         <p class="eyebrow">Mini Project 2</p>
+
         <h1>Workflow Tracker</h1>
 
         <p class="header-description">
@@ -35,31 +36,316 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Overview</p>
-            <h2 id="summary-heading">Task summary</h2>
+
+            <h2 id="summary-heading">
+              Task summary
+            </h2>
           </div>
         </div>
 
-        <div id="task-summary" class="summary-grid"></div>
+        <div
+          id="task-summary"
+          class="summary-grid"
+        ></div>
+      </section>
+
+      <section
+        class="task-form-section"
+        aria-labelledby="create-task-heading"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">New task</p>
+
+            <h2 id="create-task-heading">
+              Create a workflow task
+            </h2>
+          </div>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="task-title">
+                Task title
+              </label>
+
+              <input
+                id="task-title"
+                name="title"
+                type="text"
+                required
+                maxlength="100"
+                placeholder="Example: Review access report"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="task-workflow">
+                Workflow
+              </label>
+
+              <select
+                id="task-workflow"
+                name="workflow"
+                required
+              >
+                <option value="">
+                  Select a workflow
+                </option>
+
+                <option value="Vendor Due Diligence">
+                  Vendor Due Diligence
+                </option>
+
+                <option value="Quarterly Access Review">
+                  Quarterly Access Review
+                </option>
+
+                <option value="Policy Exception Review">
+                  Policy Exception Review
+                </option>
+
+                <option value="Audit Evidence Request">
+                  Audit Evidence Request
+                </option>
+
+                <option value="Incident Response Review">
+                  Incident Response Review
+                </option>
+              </select>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="task-description">
+                Description
+              </label>
+
+              <textarea
+                id="task-description"
+                name="description"
+                required
+                maxlength="300"
+                rows="4"
+                placeholder="Describe what needs to be completed."
+              ></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="task-owner">
+                Owner
+              </label>
+
+              <input
+                id="task-owner"
+                name="owner"
+                type="text"
+                required
+                maxlength="60"
+                placeholder="Example: Alex Reviewer"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="task-due-date">
+                Due date
+              </label>
+
+              <input
+                id="task-due-date"
+                name="dueDate"
+                type="date"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="task-status">
+                Status
+              </label>
+
+              <select
+                id="task-status"
+                name="status"
+                required
+              >
+                <option value="not-started">
+                  Not started
+                </option>
+
+                <option value="in-progress">
+                  In progress
+                </option>
+
+                <option value="blocked">
+                  Blocked
+                </option>
+
+                <option value="completed">
+                  Completed
+                </option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="task-risk">
+                Risk level
+              </label>
+
+              <select
+                id="task-risk"
+                name="riskLevel"
+                required
+              >
+                <option value="low">
+                  Low
+                </option>
+
+                <option value="medium" selected>
+                  Medium
+                </option>
+
+                <option value="high">
+                  High
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="primary-button"
+            >
+              Add task
+            </button>
+
+            <button
+              type="reset"
+              class="secondary-button"
+            >
+              Clear form
+            </button>
+          </div>
+
+          <p
+            id="form-status"
+            class="form-status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+
+      <section
+        class="filter-section"
+        aria-labelledby="filter-heading"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Find tasks</p>
+
+            <h2 id="filter-heading">
+              Search and filter
+            </h2>
+          </div>
+        </div>
+
+        <div class="filter-panel">
+          <div class="filters-grid">
+            <div class="form-field">
+              <label for="task-search">
+                Search tasks
+              </label>
+
+              <input
+                id="task-search"
+                type="search"
+                placeholder="Search title, owner, or workflow"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="workflow-filter">
+                Workflow
+              </label>
+
+              <select id="workflow-filter">
+                <option value="all">
+                  All workflows
+                </option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="status-filter">
+                Status
+              </label>
+
+              <select id="status-filter">
+                <option value="all">
+                  All statuses
+                </option>
+
+                <option value="not-started">
+                  Not started
+                </option>
+
+                <option value="in-progress">
+                  In progress
+                </option>
+
+                <option value="blocked">
+                  Blocked
+                </option>
+
+                <option value="completed">
+                  Completed
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-actions">
+            <button
+              id="clear-filters"
+              type="button"
+              class="secondary-button"
+            >
+              Clear filters
+            </button>
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="tasks-heading">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Work queue</p>
-            <h2 id="tasks-heading">Workflow tasks</h2>
+
+            <h2 id="tasks-heading">
+              Workflow tasks
+            </h2>
           </div>
 
-          <p id="task-count" class="task-count"></p>
+          <p
+            id="task-count"
+            class="task-count"
+            aria-live="polite"
+          ></p>
         </div>
 
         <div
           id="task-list"
           class="task-grid"
           aria-live="polite"
+          aria-busy="true"
         ></div>
       </section>
     </main>
 
-    <script type="module" src="./app.js"></script>
+    <script
+      type="module"
+      src="./app.js"
+    ></script>
   </body>
 </html>

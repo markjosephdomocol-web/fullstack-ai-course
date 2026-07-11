@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "workflow": "Vendor Due Diligence",
+    "title": "Review vendor security questionnaire",
+    "description": "Review the fictional vendor questionnaire and document missing answers.",
+    "owner": "alex reviewer",
+    "status": "in-progress",
+    "dueDate": "2026-07-13",
+    "riskLevel": "high"
+  },
+  {
+    "id": 2,
+    "workflow": "Quarterly Access Review",
+    "title": "Collect application access list",
+    "description": "Collect a dummy list of active users from the sample application.",
+    "owner": "casey manager",
+    "status": "not-started",
+    "dueDate": "2026-07-15",
+    "riskLevel": "medium"
+  },
+  {
+    "id": 3,
+    "workflow": "Policy Exception Review",
+    "title": "Confirm exception owner",
+    "description": "Confirm that the fictional policy exception has an assigned owner.",
+    "owner": "jordan analyst",
+    "status": "blocked",
+    "dueDate": "2026-07-09",
+    "riskLevel": "high"
+  },
+  {
+    "id": 4,
+    "workflow": "Audit Evidence Request",
+    "title": "Upload sample approval record",
+    "description": "Attach a fictional approval record to the audit evidence request.",
+    "owner": "taylor reviewer",
+    "status": "completed",
+    "dueDate": "2026-07-08",
+    "riskLevel": "low"
+  },
+  {
+    "id": 5,
+    "workflow": "Vendor Due Diligence",
+    "title": "Document remediation actions",
+    "description": "Create fictional follow-up tasks for the vendor's missing controls.",
+    "owner": "alex reviewer",
+    "status": "not-started",
+    "dueDate": "2026-07-18",
+    "riskLevel": "medium"
+  },
+  {
+    "id": 6,
+    "workflow": "Quarterly Access Review",
+    "title": "Review privileged accounts",
+    "description": "Check dummy privileged accounts and identify unnecessary access.",
+    "owner": "casey manager",
+    "status": "in-progress",
+    "dueDate": "2026-07-12",
+    "riskLevel": "high"
+  },
+  {
+    "id": 7,
+    "workflow": "Incident Response Review",
+    "title": "Review sample incident timeline",
+    "description": "Review a fictional incident and confirm escalation timestamps.",
+    "owner": "morgan analyst",
+    "status": "not-started",
+    "dueDate": "2026-07-29",
+    "riskLevel": "medium"
+  }
+]
