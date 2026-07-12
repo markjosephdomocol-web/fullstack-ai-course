@@ -1,27 +1,29 @@
 import { useState } from "react";
 import "./App.css";
 import TaskCard from "./components/TaskCard";
+import TaskForm from "./components/TaskForm";
 import WorkflowFilter from "./components/WorkflowFilter";
 import { initialTasks } from "./data/tasks";
 
-const workflowOptions = [
-  "All",
-  ...new Set(initialTasks.map((task) => task.workflow)),
-];
-
-const statusOptions = [
-  "All",
-  ...new Set(initialTasks.map((task) => task.status)),
-];
-
 function App() {
+  const [tasks, setTasks] = useState(initialTasks);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedWorkflow, setSelectedWorkflow] = useState("All");
   const [selectedStatus, setSelectedStatus] = useState("All");
 
+  const workflowOptions = [
+    "All",
+    ...new Set(tasks.map((task) => task.workflow)),
+  ];
+
+  const statusOptions = [
+    "All",
+    ...new Set(tasks.map((task) => task.status)),
+  ];
+
   const normalizedSearchTerm = searchTerm.trim().toLowerCase();
 
-  const filteredTasks = initialTasks.filter((task) => {
+  const filteredTasks = tasks.filter((task) => {
     const searchableText = [
       task.title,
       task.description,
@@ -38,10 +40,12 @@ function App() {
       searchableText.includes(normalizedSearchTerm);
 
     const matchesWorkflow =
-      selectedWorkflow === "All" || task.workflow === selectedWorkflow;
+      selectedWorkflow === "All" ||
+      task.workflow === selectedWorkflow;
 
     const matchesStatus =
-      selectedStatus === "All" || task.status === selectedStatus;
+      selectedStatus === "All" ||
+      task.status === selectedStatus;
 
     return matchesSearch && matchesWorkflow && matchesStatus;
   });
@@ -50,6 +54,10 @@ function App() {
     searchTerm.trim() !== "" ||
     selectedWorkflow !== "All" ||
     selectedStatus !== "All";
+
+  function handleAddTask(newTask) {
+    setTasks((currentTasks) => [newTask, ...currentTasks]);
+  }
 
   function clearFilters() {
     setSearchTerm("");
@@ -65,17 +73,20 @@ function App() {
           <h1>Workflow Tracker</h1>
 
           <p className="header-description">
-            Track fictional compliance and business workflow tasks using React.
+            Track fictional compliance and business workflow tasks using
+            React.
           </p>
         </div>
 
         <div className="task-count">
-          <strong>{initialTasks.length}</strong>
+          <strong>{tasks.length}</strong>
           <span>Total tasks</span>
         </div>
       </header>
 
       <main>
+        <TaskForm onAddTask={handleAddTask} />
+
         <WorkflowFilter
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
@@ -96,7 +107,7 @@ function App() {
           </div>
 
           <p className="results-count">
-            Showing {filteredTasks.length} of {initialTasks.length} tasks
+            Showing {filteredTasks.length} of {tasks.length} tasks
           </p>
         </section>
 
